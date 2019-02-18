@@ -1,11 +1,17 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, StatusBar } from "react-native";
+
+import Home from "./screens/Home";
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <StatusBar barStyle="light-content" />
+        <View style={styles.top}>
+          <Text>Open up App.js to start working on your app!</Text>
+        </View>
+        <Home />
       </View>
     );
   }
@@ -14,8 +20,12 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff"
   },
+  top: {
+    flex: 1,
+    backgroundColor: "blue",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
